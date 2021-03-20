@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 import scipy.stats as st
 
 import common
+import time
+start = time.time()
 
 def update_theta(eps, M, phi, curr_theta):
     proposal = curr_theta + eps * np.linalg.inv(M) @ phi
@@ -84,6 +86,7 @@ print("Acceptance ratio is " + str(num_accepted / (num_steps)))
 print("OOB ratio is " + str(num_oob / (num_steps)))
 print("Mean theta is " + str(sampled_theta.mean()))
 print("Std theta is " + str(sampled_theta.std()))
+print("Time taken: " + str(np.round(time.time() - start, 2)))
 
 # # plot things
 f, (ax1, ax2, ax3, ax4, ax5, ax6, ax7) = plt.subplots(7, 1, figsize=(8, 11))

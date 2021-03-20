@@ -31,11 +31,7 @@ def init_theta(data):
     Returns: 
         theta: 7 dimensional vector of parameters.
     """
-<<<<<<< HEAD
     theta = np.array([1, 0.5, 0.5, 0, 0, 0, 0]).reshape(-1, 1)
-=======
-    theta = np.array([1, 0.5, 0.38, 0.2, 0.8, 0.5, 0.1]).reshape(-1, 1)
->>>>>>> d5ad833 (Initial Commit)
     # theta = np.array([1.5, 0.5, 0, 0, -0.5, 0.5, 1.75]).reshape(-1, 1)
     return theta
 
